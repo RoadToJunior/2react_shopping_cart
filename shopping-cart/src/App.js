@@ -1,13 +1,16 @@
-import "./App.css";
+import "./style.css";
 import React from "react";
 
 class App extends React.Component {
-  state = {};
+  state = {
+    availableProducts: 7,
+    shoppingCart: 0,
+  };
   render() {
     return (
       <>
-        <button>-</button>
-        <span>0</span>
+        <button disabled>-</button>
+        <span> 0 </span>
         <button>+</button>
       </>
     );
