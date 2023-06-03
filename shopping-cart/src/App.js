@@ -9,8 +9,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <button disabled>-</button>
-        <span> 0 </span>
+        <button disabled={this.state.shoppingCart ? false : true}>-</button>
+        <span> {this.state.shoppingCart} </span>
         <button>+</button>
       </>
     );
