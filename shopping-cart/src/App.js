@@ -1,10 +1,16 @@
-import { divide } from "cypress/types/lodash";
 import "./App.css";
+import React from "react";
 
 class App extends React.Component {
   state = {};
   render() {
-    return <div>{}</div>;
+    return (
+      <>
+        <button>-</button>
+        <span>0</span>
+        <button>+</button>
+      </>
+    );
   }
 }
 
