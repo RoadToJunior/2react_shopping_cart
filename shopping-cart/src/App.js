@@ -1,10 +1,11 @@
+import { divide } from "cypress/types/lodash";
+import "./App.css";
 
-import './App.css';
-
-function App() {
-  return (
-  
-  );
+class App extends React.Component {
+  state = {};
+  render() {
+    return <div>{}</div>;
+  }
 }
 
 export default App;
