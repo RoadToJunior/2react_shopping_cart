@@ -36,6 +36,7 @@ class App extends React.Component {
         >
           +
         </button>
+        {this.state.shoppingCart > 0 && <button>KUP</button>}
       </>
     );
   }
