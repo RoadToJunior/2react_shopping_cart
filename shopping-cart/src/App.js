@@ -16,6 +16,12 @@ class App extends React.Component {
       shoppingCart: this.state.shoppingCart + 1,
     });
   };
+  handleBuy = () => {
+    this.setState({
+      availableProducts: this.state.availableProducts - this.state.shoppingCart,
+      shoppingCart: 0,
+    });
+  };
   render() {
     return (
       <>
@@ -36,7 +42,9 @@ class App extends React.Component {
         >
           +
         </button>
-        {this.state.shoppingCart > 0 && <button>KUP</button>}
+        {this.state.shoppingCart > 0 && (
+          <button onClick={this.handleBuy}>BUY</button>
+        )}
       </>
     );
   }
