@@ -8,7 +8,12 @@ class App extends React.Component {
   };
   handleRemoveFromCart = () => {
     this.setState({
-      shoppindCart: this.state.shoppingCart - 1,
+      shoppingCart: this.state.shoppingCart - 1,
+    });
+  };
+  handleAddToCart = () => {
+    this.setState({
+      shoppingCart: this.state.shoppingCart + 1,
     });
   };
   render() {
@@ -21,7 +26,16 @@ class App extends React.Component {
           -
         </button>
         <span> {this.state.shoppingCart} </span>
-        <button>+</button>
+        <button
+          disabled={
+            this.state.shoppingCart === this.state.availableProducts
+              ? true
+              : false
+          }
+          onClick={this.handleAddToCart}
+        >
+          +
+        </button>
       </>
     );
   }
