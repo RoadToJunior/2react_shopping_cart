@@ -31,7 +31,17 @@ class App extends React.Component {
         >
           -
         </button>
-        <span> {this.state.shoppingCart} </span>
+        <span
+          style={
+            this.state.shoppingCart === 0
+              ? {
+                  opacity: 0.3,
+                }
+              : null
+          }
+        >
+          {this.state.shoppingCart}
+        </span>
         <button
           disabled={
             this.state.shoppingCart === this.state.availableProducts
